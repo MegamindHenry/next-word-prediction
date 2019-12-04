@@ -107,3 +107,6 @@ venv.bak/
 .idea/*
 .DS_Store
 srilm/play.sh
+*.h5
+*.pkl
+lstm/republic_sequences.txt
