@@ -44,7 +44,6 @@ def print_full_prop_list(model, tokenizer, context, sort=True):
     reverse_word_map = dict(map(reversed, tokenizer.word_index.items()))
     encoded = tokenizer.texts_to_sequences([context])[0]
     encoded = pad_sequences([encoded], maxlen=4, truncating='pre')
-
     yhat_row = model.predict(encoded)[0]
 
     sort_index = np.argsort(yhat_row)[::-1]
@@ -76,9 +75,9 @@ tokenizer = load(open('tokenizer.pkl', 'rb'))
 # generated = generate_seq(model, tokenizer, seq_length, seed_text, 50)
 # print(generated)
 
-context = ["polemarchus polemarchus polemarchus polemarchus"]
-context1 = ["me said to me"]
-context2 = ["polemarchus i to me"]
+context = "me me me me"
+context1 = "me said to me"
+context2 = "polemarchus i to me"
 print("----------111111----------")
 print_full_prop_list(model, tokenizer, context)
 print("----------222222----------")
