@@ -42,8 +42,8 @@ tokenized_text = [list(map(str.lower, word_tokenize(sent)))
 n = 3
 train_data, padded_sents = padded_everygram_pipeline(n, tokenized_text)
 
-from nltk.lm import MLE
-model = MLE(n)
+from nltk.lm import WittenBellInterpolated
+model = WittenBellInterpolated(n)
 
 model.fit(train_data, padded_sents)
 
