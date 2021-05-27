@@ -1,0 +1,3 @@
+nltk==3.4.5
+keras==2.2.4
+tensorflow==1.15.0
